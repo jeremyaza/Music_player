@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+$bg-color: #e0e5ec;
+$text-color: #636d79;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", sans-serif;
+}
+
+body{
+    background: $bg-color;
+}
+
+.title {
+    position: absolute;
+    width: 300px;
+    text-align: center;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:rgb(27, 25, 25);
+}
+
+.content_main {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#content-cover{
+    position: relative;
+    border: none;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 0 2em 0;
+    background: transparent;
+    box-shadow: -7px -7px 20px 2px #fff9, 
+                    -4px -4px 5px 2px #fff9, 
+                     7px 7px 20px 2px #0002, 
+                     4px 4px 5px 2px #0001;
+}
+
+/*Class for Effect of the image*/
+.cover{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+    left: 7px;
+    animation: cover 2.8s linear infinite;
+    animation-play-state: paused;
+}
+
+.play{
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    position: relative;
+    top: 7px;
+    left: 7px;
+    animation: cover 2.8s linear infinite;
+}
+
+
+@keyframes cover {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* Button play - neumorphism */
+.custom-btn{
+    font-size: 1.2em;
+    margin-top: 1em;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    box-shadow: -7px -7px 20px 2px #fff9, 
+                    -4px -4px 5px 2px #fff9, 
+                     7px 7px 20px 2px #0002, 
+                     4px 4px 5px 2px #0001;
+    transition: all 0.5s ease;
+    
+    &:active{
+        text-shadow: none;
+        background: #d2d8df;
+        box-shadow: 4px 4px 6px 0 #fff9, 
+                   -4px -4px 6px 0 #0002, 
+                   inset -4px -4px 6px 0 #fff9,
+                   inset 4px 4px 6px 0 #0002;
+    }
+}
+
+/* Progress Bar */
+#progress-bar{
+    position: relative;
+    width: 350px;
+    height: 10px;
+    margin: 1em 0 2em 0;
+    border-radius: 10px;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+                inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+}
+
+#progress{
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #76e2d0d0, #cc75ffce);
+}
+
+/* Audio */
+.audio-time {
+    width: 380px;
+    position: relative;
+    margin-top: -1.5em;
+    margin-bottom: 3em;
+}
+#current-time {
+    position: absolute;
+    left: 0;
+    color: $text-color;
+}
+
+#duration {
+    position: absolute;
+    right: 0;
+    color: $text-color;
+}
+
+/* Icons */
+.icons, #icon{
+    font-size: 1.5em;
+    color:$text-color;
+}
+
+/* Controls */
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 330px;
+}
+
+.btn-previous,
+.btn-next{
+    width: 55px;
+    height: 55px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .btn-play:active{
+        text-shadow: none;
+        background: #d2d8df;
+        box-shadow: 4px 4px 6px 0 #fff9, 
+                   -4px -4px 6px 0 #0002, 
+                   inset -4px -4px 6px 0 #fff9,
+                   inset 4px 4px 6px 0 #0002;
+    }
+    #progress-bar{
+        width: 250px;
+        height: 8px;
+    }
+
+    .audio-time{
+        width: 280px;
+        font-size: 0.9em;
+    }
+
+    .controls{
+        width: 290px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <p class="title">Post Malone - rockstart ft. 21 Savage</p>
+    <div class="content_main ctnt">
+      <div id="content-cover">
+        <img class="cover" src="public/img/img.webp" alt="PlayList" />
+      </div>
+      <div class="content-audio">
+        <audio id="audio">
+          <source src="public/audio/posty.ogg" type="audio/ogg" />
+          <source src="public/audio/posty.mp3" type="audio/mp3" />
+          Your browser does not support the audio element
+        </audio>
+      </div>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <div class="audio-time">
+        <span id="current-time">0:00</span>
+        <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button class="custom-btn btn-replay" id="replay">
+          <span class="icons icon-replay_10"></span>
+        </button>
+
+        <button class="custom-btn btn-play" id="play">
+          <span id="icon" class="icons icon-play_arrow"></span>
+        </button>
+
+        <button class="custom-btn btn-stop" id="stop">
+          <span class="icons icon-stop"></span>
+        </button>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
